@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Admission</title>
+  <style>
+    /* Define your CSS styles here */
+    /* Example: */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007ACC;
+      color: #FFF;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #333;
+      color: #FFF;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to College Admission</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showPage('home')">Home</a></li>
+      <li><a href="#" onclick="showPage('admission')">Admission</a></li>
+      <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to our college admission website. Learn more about our programs and admission process.</p>
+    </section>
+    <section id="admission" style="display: none;">
+      <h2>Admission</h2>
+      <p>Explore our admission requirements and submit your application to join our college.</p>
+    </section>
+    <section id="contact" style="display: none;">
+      <h2>Contact</h2>
+      <p>If you have any questions or need assistance, feel free to contact us.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2023 College Admission
+  </footer>
+  <script>
+    // JavaScript for showing/hiding content
+    function showPage(pageName) {
+      document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(pageName).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
+
